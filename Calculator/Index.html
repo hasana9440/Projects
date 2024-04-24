@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="calculator">
+        <input  id="ip" >
+        <br>
+        <button onclick="display('.')" class="operator" >.</button>
+        <button onclick="display('%')" class="operator">%</button>
+        <button onclick="display('/')" class="operator">/</button>
+        <button onclick="display('*')" class="operator">*</button>
+        <br>
+        <button onclick="display('7')" value="7" class="value" id="val">7</button>
+        <button onclick="display('8')" value="8" class="value">8</button>
+        <button onclick="display('9')" class="value">9</button>
+        <button onclick="display('+')" class="operator">+</button>
+        <br>
+        <button onclick="display('4')" class="value">4</button>
+        <button onclick="display('5')" class="value">5</button>
+        <button onclick="display('6')" class="value">6</button>
+        <button onclick="display('-')" class="operator">-</button>
+        <br>
+        <button onclick="display('1')" class="value">1</button>
+        <button onclick="display('2')" class="value">2</button>
+        <button onclick="display('3')" class="value">3</button>
+        <button onclick="cal()" class="operator">=</button>
+        <br>
+	    <button onclick="display('0')" class="value">0</button>
+        <button onclick="clearscreen()" class="clear">Clear</button>
+ 
+    </div>
+    <script src="index.js"> </script>
+</body>
+</html>
