@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodePenClone</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>CodePen Clone</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5c6a4474a0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main">
-      
-        <h1>------------ Coding with Ahammad -----------</h1>
-        
+        <h1> Happy Coding </h1>
     </div>
     <div class="content">
         <div class="left1">
-            <label class="lbl1"><i class="fa-brands fa-html5"></i>  HTML</label>
-            <textarea id="html-code" onkeyup="run()"></textarea>
-            <label class="lbl2" ><i class="fa-brands fa-css3-alt"></i>  CSS</label>
-            <textarea id="css-code" onkeyup="run()"></textarea>
-            <label class="lbl3" ><i class="fa-brands fa-js"></i>  JavaScript</label>
-            <textarea id="js-code" onkeyup="run()"></textarea>
+            <label class="lbl1"><i class="fa-brands fa-html5"></i> HTML</label>
+            <textarea id="html-code" onkeyup="run()" placeholder="Enter HTML code here..."></textarea>
+            <label class="lbl2"><i class="fa-brands fa-css3-alt"></i> CSS</label>
+            <textarea id="css-code" onkeyup="run()" placeholder="Enter CSS code here..."></textarea>
+            <label class="lbl3"><i class="fa-brands fa-js"></i> JavaScript</label>
+            <textarea id="js-code" onkeyup="run()" placeholder="Enter JavaScript code here..."></textarea>
         </div>
         <div class="right1">
-            <label ><i class="fa-solid fa-play"></i>  Output</label>
-            <iframe id="output" style="color: black;"></iframe>
+            <label><i class="fa-solid fa-play"></i> Output</label>
+            <iframe id="output"></iframe>
         </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
