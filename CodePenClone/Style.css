@@ -1,84 +1,234 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
-    background: #667db6;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+body {
+    background: linear-gradient(135deg, #667db6, #0082c8, #0082c8, #667db6);
     color: #fff;
+    min-height: 100vh;
 }
 
-h1{
+h1 {
     text-align: center;
     text-decoration: underline;
-    font-size: 72px;
-    background: -webkit-linear-gradient(#34c5cd, #28d228);
+    font-size: 3rem;
+    background: linear-gradient(45deg, #34c5cd, #28d228);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 20px 0;
 }
-.main{
-    display: block;
+
+.main {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-.content{
+
+.content {
     width: 100%;
-    height: 100vh;
     padding: 20px;
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-.left1,.right1{
-    flex-basis: 50%;
+
+.left1, .right1 {
+    flex: 1;
+    min-width: 300px;
     padding: 10px;
 }
-textarea{
-    margin: 5px;
+
+textarea {
     width: 100%;
-    height: 28%;
+    height: 150px;
     background-color: #1e1e1e;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px;
     border: 0;
     outline: 0;
-    font-size: 18px;
+    font-size: 16px;
+    border-radius: 10px;
+    resize: vertical;
+    transition: box-shadow 0.3s ease;
 }
-iframe{
+
+textarea:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+iframe {
     width: 100%;
-    height: 95%;
+    height: calc(100% - 40px);
     background-color: #fff;
-    color: #1e1e1e;
     border: 0;
     outline: 0;
     border-radius: 10px;
-    margin: 5px;
+    margin-top: 10px;
 }
-label i{
-    margin-left: 10px;
-    margin-right: 10px;
-}
-label{
+
+label {
     display: flex;
     align-items: center;
-    background-color: black;
-    height: 30px;
-}
-.lbl1{
-    background-color: orange;
-}
-.lbl2{
-    background-color: rgb(70, 70, 196);
-}
-.lbl3{
-    background-color: #c7ca39;
-}
-label,textarea{
+    background-color: #000;
+    height: 40px;
+    padding: 0 15px;
     border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+label i {
+    margin-right: 10px;
+}
+
+.lbl1 {
+    background-color: #e44d26; /* HTML Orange */
+}
+
+.lbl2 {
+    background-color: #264de4; /* CSS Blue */
+}
+
+.lbl3 {
+    background-color: #f0db4f; /* JS Yellow */
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .left1, .right1 {
+        flex: 1;
+        width: 100%;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    textarea {
+        height: 100px;
+    }
+}
+h1 {
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(2rem, 6vw, 4rem); /* Responsive font size */
+    background: linear-gradient(45deg, #34c5cd, #28d228);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px 0;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(52, 197, 205, 0.8), 0 0 20px rgba(40, 210, 40, 0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(1.5rem, 5vw, 3rem); /* Adjust for tablets */
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(1.2rem, 4vw, 2rem); /* Adjust for mobile */
+        letter-spacing: 0.5px;
+    }
+}
+/* Updated Body Background */
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23d5ab,#8cdd5e);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* Remove overflow:hidden */
+    overflow-y: auto; /* This allows vertical scrolling */
 }
 
 
+/* Gradient Animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
+/* Add a subtle overlay for better readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    z-index: -1;
+}
 
+/* Make the content pop */
+.main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Add a glowing effect to the textarea */
+textarea {
+    background-color: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+textarea:focus {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Add a subtle animation to the iframe */
+iframe {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.02);
+}
