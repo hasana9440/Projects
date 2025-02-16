@@ -1,72 +1,85 @@
-*{
+/* Custom styles */
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    font-size: 60px;
-}
-body{
-    
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(12, 56, 40);
-    
+    font-family: 'Arial', sans-serif;
 }
-.calculator{
-    width: 500px;
-    border: 10px solid rgba(220, 156, 28, 0.425);
-    border-radius: 20px;
-    height: auto;
-    padding: 10px;
-    
-    margin-top: 50px;;
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
-input{
+
+.calculator {
+    max-width: 400px;
     width: 100%;
-    height: 100px;
-    border-radius: 10px;
-    background-color: rgb(99, 126, 126);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    font-size: 2rem !important;
+    height: 80px !important;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 10px 20px;
     text-align: right;
-    color: rgba(3, 3, 3, 0.816);
-}
-button{
-    width: 100px;
-    height: 100px;
-    border: 0 solid white;
-    border-radius: 50%;
-    margin: 3px;
-}
-.value,.clear{
-    background-color: rgb(51, 44, 44);
-    color: antiquewhite;
-    
-}
-.value:hover,.clear:hover{
-    background-color: rgb(37, 33, 33);
-
-}
-.value:active,.clear:active{
-    background-color: rgb(26, 24, 24);
-    
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none;
 }
 
-.clear{
-    margin-left: 30px;
-    width: 300px;
-    border-radius: 18px;
-    color: red;
+input:focus {
+    border: 2px solid #ffc107;
+    box-shadow: 0 5px 20px rgba(255, 193, 7, 0.4);
+    background: rgba(255, 255, 255, 1);
 }
-button:hover{
-    filter : drop-shadow(0 0 15px blue);
+
+button {
+    font-size: 1.5rem !important;
+    padding: 10px !important;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
-.button:active{
-    border: 1px solid white;
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-.operator{
-    background-color: rgb(97, 97, 9);
+
+.btn-secondary {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
 }
-.operator:hover{
-    background-color: rgb(159, 159, 19);
+
+.btn-warning {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
 }
-.operator:active{
-    background-color: rgb(241, 241, 13);
+
+.btn-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
 }
